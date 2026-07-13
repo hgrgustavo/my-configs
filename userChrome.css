@@ -1,0 +1,138 @@
+@-moz-document url("chrome://browser/content/browser.xhtml") {
+	*, *::before, *::after {
+		border: none !important;
+		border-radius: 0 !important;
+		outline: none !important;
+	}
+
+	:root {
+		--tab-border-radius: 0px !important;
+		--sidebar-box-border-color: transparent !important;
+		--sidebar-box-border-width: 0px !important;
+		--tabs-navbar-separator-color: transparent !important;
+		border-radius: none !important;
+		color-scheme: light !important;
+		--tab-min-height: none;
+
+	}
+
+	@layer tokens-foundation {
+		:root, :host(.anonymous-content-host) {
+			--dimension-relative-050: none !important;
+		}
+	}
+
+	html#main-window {
+		--toolbar-field-background-color: transparent !important;
+	}
+
+	:root {
+		&[lwtheme] {
+			--toolbox-bgcolor: #191919 !important;
+			--toolbox-bgcolor-inactive: #191919 !important;
+			--tab-selected-outline-color: none;
+		}
+	}
+
+	body {
+		box-shadow: none !important;
+		border-style: none !important;
+		border: 0px !important;
+	}
+
+	tabpanels,
+	deck,
+	stack {
+		display: grid;
+		position: relative;
+		background-color: #191919 !important;
+		gap: 0;
+		border: none;
+	}
+
+	toolbarbutton[id] {
+		display: none;
+	}
+
+	#navigator-toolbox {
+		border: 0px !important;
+	}
+
+	.button-background.labelled {
+		display: none !important;
+	}
+
+	#TabsToolbar {
+		border: none !important;
+	}
+
+	#page-action-buttons {
+		display: none;
+	}
+
+	#urlbar-page-action {
+		display: none;
+	}
+
+	#urlbar-container {
+		margin-left: 0px !important;
+	}
+
+	#tabbrowser-tabbox {
+		color: transparent;
+		box-shadow: none !important;
+		z-index: 0 !important;
+		border-radius: 0px !important;
+		border: 0px !important;
+	}
+
+	#sidebar-main {
+		background-color: #191919;
+		border-radius: 0px !important;
+	}
+
+	#sidebar-box {
+		padding-bottom: 0px !important;
+		border: 0px !important;
+		border-radius: 0px !important;
+		box-shadow: none !important;
+	}
+
+	#sidebar-splitter, .sidebar-splitter {
+		background-color: #191919 !important;
+		border: 0px !important;
+		margin-bottom: 0px !important;
+		position: relative;
+		width: 2px !important;
+		z-index: 10 !important;
+	}
+
+	stack.sidebar-browser-stack {
+		box-shadow: none !important;
+	}
+
+	#urlbar-input {
+		border-radius: none !important;
+	}
+
+	.tab-close-button.close-icon {
+		display: none;
+	}
+}
+
+@-moz-document url("chrome://browser/content/genai/chat.html") {
+	#summarize-btn-container {
+		display: none;
+	}
+
+	#header {
+		background-color: #191919 !important;
+		padding-right: 0px !important;
+		padding-left: 0px !important;
+		border: 0px !important;
+	}
+
+	#message-container {
+		display: none;
+	}
+}
